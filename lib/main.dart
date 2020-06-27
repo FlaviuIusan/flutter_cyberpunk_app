@@ -7,9 +7,6 @@ void main() {
 }
 
 class MainApp extends StatelessWidget {
-  //two
-  //modification
-  //1
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
