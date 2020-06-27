@@ -8,11 +8,11 @@ void main() {
 
 class MainApp extends StatelessWidget {
   // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'projectx',
-
       home: MainScreen(),
 
     );
@@ -26,34 +26,17 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   String _background = "intro.gif"; //imaginea in _mainBody -> decoration
-  Timer _timer;
-  int _animationRemaining = 5;
 
   @override
   Widget build(BuildContext context) {
-    startTimer(); //pornesc timer
+    final player = AudioCache();
+    player.play("maintheme.mp3");
     return Scaffold(
       body: _mainBody(
       ),
     );
   }
 
-  final player = AudioCache();
-
-  void startTimer() {
-    const oneSec = const Duration(seconds: 1);
-    player.play("maintheme.mp3");
-    _timer = new Timer.periodic(oneSec,
-            (timer) {
-          if(_animationRemaining<1){
-            timer.cancel();
-            player.clear("sound.mp3");
-          }
-          else{
-            _animationRemaining = _animationRemaining - 1;
-          }
-        });
-  }
 
   Widget _mainBody(){
     return Container(
