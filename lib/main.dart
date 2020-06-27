@@ -51,25 +51,24 @@ class _MainScreenState extends State<MainScreen> {
         ),
       ),
       alignment: Alignment(0.5,0.5),
-      child: FlatButton(
-        color: Colors.blue,
-        textColor: Colors.white,
-        disabledColor: Colors.grey,
-        disabledTextColor: Colors.black,
-        padding: EdgeInsets.all(8.0),
-        splashColor: Colors.blueAccent,
-        onPressed: () {
-          print("Button Apasat Second");
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => MainMenu()),
-          );
-        },
-        child: Text(
-          "Flat Button",
-          style: TextStyle(fontSize: 20.0),
-        ),
-      ),
+      child:  GestureDetector(
+        child: Container(
+            width:120,
+            height: 40,
+            decoration: BoxDecoration(
+              color: Colors.black,
+              image: DecorationImage(
+                  image:AssetImage("download.jpg"),
+                  fit:BoxFit.cover
+              ),
+            )
+        ),onTap:(){
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => MainMenu()),
+        );
+      },
+      )
 
     );
   }
