@@ -51,7 +51,7 @@ flutter:
    - download.jpg
    - giphy.gif
    - intro.gif
-   - sound.mp3
+   - maintheme.mp3
 
   # To add assets to your application, add an assets section, like this:
   # assets:
