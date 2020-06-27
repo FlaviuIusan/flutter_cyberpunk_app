@@ -1,3 +1,5 @@
+import 'dart:async';
+import 'package:audioplayers/audio_cache.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -22,7 +24,6 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-
 
   @override
   Widget build(BuildContext context) {
@@ -69,9 +70,28 @@ class SecondScreen extends StatefulWidget {
 
 class _SecondScreenState extends State<SecondScreen> {
 
+  String _background = "intro.gif"; //imaginea in _mainBody -> decoration
+  Timer _timer;
+  int _animationRemaining = 5;
+  final player = AudioCache();
+  void startTimer() {
+    const oneSec = const Duration(seconds: 1);
+    player.play("sound.mp3");
+    _timer = new Timer.periodic(oneSec,
+            (timer) {
+          if(_animationRemaining<1){
+            timer.cancel();
+            player.clear("sound.mp3");
+          }
+          else{
+            _animationRemaining = _animationRemaining - 1;
+          }
+        });
+  }
 
   @override
   Widget build(BuildContext context) {
+    startTimer(); //pornesc timer
     return Scaffold(
       body: _mainBody(
       ),
@@ -82,7 +102,7 @@ class _SecondScreenState extends State<SecondScreen> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("images/download.jpg"),
+          image: AssetImage(_background), //imaginea schimbata de timer
           fit: BoxFit.cover,
         ),
       ),
