@@ -48,10 +48,15 @@ flutter:
   uses-material-design: true
 
   assets:
-   - download.jpg
-   - giphy.gif
    - intro.gif
    - maintheme.mp3
+   - logosound.mp3
+   - enterbutton.gif
+   - infobutton.gif
+   - linksbutton.gif
+   - wallpapersbutton.gif
+   - animatedbackground.gif
+   - titleanimation.gif
 
   # To add assets to your application, add an assets section, like this:
   # assets:

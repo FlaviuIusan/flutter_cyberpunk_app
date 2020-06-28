@@ -19,23 +19,31 @@ class _MainMenuWidgetState extends State<MainMenuWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        alignment: Alignment(0.0, 0.5),
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("animatedbackground.gif"), //imaginea schimbata de timer
+            fit: BoxFit.fill,
+          ),
+        ),
+        alignment: Alignment(0.0, 1.5),
         child: _butoaneWidget(),
       )
     );
   }
 
   Widget _butoaneWidget(){
+
     return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         GestureDetector(
           child: Container(
-              width:120,
-              height: 40,
+              width:250,
+              height: 50,
               decoration: BoxDecoration(
                 color: Colors.black,
                 image: DecorationImage(
-                    image:AssetImage("download.jpg"),
+                    image:AssetImage("infobutton.gif"),
                     fit:BoxFit.cover
                 ),
               )
@@ -48,12 +56,12 @@ class _MainMenuWidgetState extends State<MainMenuWidget> {
         ),
         GestureDetector(
           child: Container(
-              width:120,
-              height: 40,
+              width:250,
+              height: 50,
               decoration: BoxDecoration(
                 color: Colors.black,
                 image: DecorationImage(
-                    image:AssetImage("download.jpg"),
+                    image:AssetImage("wallpapersbutton.gif"),
                     fit:BoxFit.cover
                 ),
               )
@@ -66,12 +74,12 @@ class _MainMenuWidgetState extends State<MainMenuWidget> {
         ),
         GestureDetector(
           child: Container(
-              width:120,
-              height: 40,
+              width:250,
+              height: 50,
               decoration: BoxDecoration(
                 color: Colors.black,
                 image: DecorationImage(
-                    image:AssetImage("download.jpg"),
+                    image:AssetImage("linksbutton.gif"),
                     fit:BoxFit.cover
                 ),
               )
