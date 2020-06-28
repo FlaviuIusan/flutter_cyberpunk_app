@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:audioplayers/audio_cache.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter/services.dart';
 import 'mainmenu.dart';
 
 void main() {
@@ -41,6 +41,7 @@ class _MainScreenState extends State<MainScreen> {
   String _background = "intro.gif"; //imaginea in _mainBody -> decoration
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom]);
     cache.play("audio/logosound.mp3");
     setAudio();
     return Scaffold(
