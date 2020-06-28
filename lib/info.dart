@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
 
 class Info extends StatelessWidget {
   @override
@@ -19,65 +21,60 @@ class InfoWidget extends StatefulWidget {
 }
 
 class _InfoWidgetState extends State<InfoWidget> {
-
   final List<MyText> texts = <MyText>[];
+  bool scrollable = true;
 
   @override
   Widget build(BuildContext context) {
-    texts.add(MyText("Titlu", "Content content content content content content content content'\n' content content content")); //primul text ca sa nu fie 0 lenght
     return Scaffold(
-      backgroundColor: Colors.blue,
       body: _buildTexts(),
     );
   }
 
   Widget _buildText(MyText text) {
-    return ListTile(
-      title: Text(
-        text.title,
+    return Container(
+      child: ListTile(
+        title: Text(
+          text.title,
+        ),
+        subtitle: Text(
+          text.content,
+        ),
+        onTap: () {},
       ),
-      subtitle: Text(
-        text.content,
-      ),
-      trailing: Icon(
-        Icons.favorite,
-      ),
-      onTap: () {
-
-      },
+      decoration: new BoxDecoration(color: Colors.red),
     );
   }
 
   Widget _buildTexts() {
-
-    return ListView.builder(
-        padding: const EdgeInsets.all(16),
+    bool isScrolable = true;
+      return ListView.builder(
         itemBuilder: (BuildContext _context, int i) {
-          if(i.isOdd){
-            return Divider();
-          }
-          final int index = i~/2;
-
-          if(index>texts.length-1){
-            for(int j=0; j<10; ++j) {
+          if (texts.length <1) {
+            for (int j = 0; j < 10; ++j) {
               texts.add(MyText(" \n Titlu",
-                  '\n Content content content content content content content content \n content content \n content'));
+                  '\n Content content content content content content content content content content content content content content content content content content content content content content content content content content'
+                      'content content content content content content content content content content content content content content content content content content content content content content content content 2'
+                      'content content content content content content content content content content content content content content content content content content content content content content content content 3'));
             }
           }
-          return _buildText(texts[index]);
-        });
+          if(i>8){
+            texts.add(MyText("", " "));
+          }
+          return _buildText(texts[i]);
+        },
+
+      )
+      ;
   }
-
-
 }
 
-class MyText{
+class MyText {
   String title;
   String content;
 
-  MyText(String title, String content){
+  MyText(String title, String content) {
     this.title = title;
     this.content = content;
   }
-
 }

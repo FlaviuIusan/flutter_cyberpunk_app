@@ -53,7 +53,6 @@ class _WallpapersWidgetState extends State<WallpapersWidget> {
   Widget _buildImages() {
 
     return ListView.builder(
-        padding: const EdgeInsets.all(16),
         itemBuilder: (BuildContext _context, int i) {
           if(i.isOdd){
             return Divider();
