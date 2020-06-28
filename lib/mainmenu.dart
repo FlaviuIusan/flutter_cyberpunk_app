@@ -4,15 +4,6 @@ import 'package:projectx/wallpapers.dart';
 import 'info.dart';
 import 'links.dart';
 
-class MainMenu extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-      return MaterialApp(
-      home: MainMenuWidget(),
-    );
-  }
-}
-
 class MainMenuWidget extends StatefulWidget {
   @override
   _MainMenuWidgetState createState() => _MainMenuWidgetState();
@@ -54,7 +45,7 @@ class _MainMenuWidgetState extends State<MainMenuWidget> {
           ),onTap:(){
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => Info()),
+            MaterialPageRoute(builder: (context) => InfoWidget()),
           );
         },
         ),
@@ -72,7 +63,7 @@ class _MainMenuWidgetState extends State<MainMenuWidget> {
           ),onTap:(){
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => Wallpapers()),
+            MaterialPageRoute(builder: (context) => WallpapersWidget()),
           );
         },
         ),
@@ -90,7 +81,7 @@ class _MainMenuWidgetState extends State<MainMenuWidget> {
           ),onTap:(){
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => Links()),
+            MaterialPageRoute(builder: (context) => LinksWidget()),
           );
         },
         ),

@@ -2,17 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
-class Wallpapers extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        primaryColor: Colors.white,
-      ),
-      home: WallpapersWidget(),
-    );
-  }
-}
 
 class WallpapersWidget extends StatefulWidget {
   @override

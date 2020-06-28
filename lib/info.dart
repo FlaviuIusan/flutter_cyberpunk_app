@@ -5,24 +5,6 @@ import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'mainmenu.dart';
-class Info extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return new WillPopScope(
-        onWillPop: () async {
-
-        return true;
-      },
-      child: new MaterialApp(
-        theme: ThemeData(
-          primaryColor: Colors.white,
-        ),
-        home: InfoWidget(),
-    ));
-
-  }
-
-}
 
 class InfoWidget extends StatefulWidget {
   @override

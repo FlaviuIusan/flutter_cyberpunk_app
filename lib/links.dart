@@ -2,17 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class Links extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        primaryColor: Colors.white,
-      ),
-      home: LinksWidget(),
-    );
-  }
-}
 
 class LinksWidget extends StatefulWidget {
   @override

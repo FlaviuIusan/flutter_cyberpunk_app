@@ -97,7 +97,7 @@ class _MainScreenState extends State<MainScreen> {
             //audioPlayer.stop();
             Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => MainMenu()),
+            MaterialPageRoute(builder: (context) => MainMenuWidget()),
         );
       },
       )
