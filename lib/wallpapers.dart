@@ -25,28 +25,24 @@ class _WallpapersWidgetState extends State<WallpapersWidget> {
 
   @override
   Widget build(BuildContext context) {
-    images.add("https://assets.vg247.com/current//2020/03/cyberpunk_wallpaper_4.jpg");
+    images.add("https://i.pinimg.com/originals/e9/85/93/e98593999fa2d78bf7c2fef3645d515e.jpg");
     return Scaffold(
-      backgroundColor: Colors.blue,
       body: _buildImages(),
     );
   }
 
   Widget _buildImage(String imageUrl) {
-    return ListTile(
-      title: Center(
-        child: CachedNetworkImage(
+    return Container(
+    child: ListTile(
+      subtitle: CachedNetworkImage(
           imageUrl: imageUrl,
           placeholder: (context, url) => CircularProgressIndicator(),
           errorWidget: (context, url, error) => Icon(Icons.error),
         ),
-      ),
-      trailing: Icon(
-        Icons.favorite,
-      ),
       onTap: () {
 
       },
+    ),
     );
   }
 
@@ -55,7 +51,7 @@ class _WallpapersWidgetState extends State<WallpapersWidget> {
     return ListView.builder(
         itemBuilder: (BuildContext _context, int i) {
           if(i.isOdd){
-            return Divider();
+
           }
           final int index = i~/2;
 

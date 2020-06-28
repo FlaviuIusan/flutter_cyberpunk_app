@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:projectx/wallpapers.dart';
 
 import 'info.dart';
+import 'links.dart';
 
 class MainMenu extends StatelessWidget {
   @override
@@ -89,7 +90,7 @@ class _MainMenuWidgetState extends State<MainMenuWidget> {
           ),onTap:(){
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => MainMenu()),
+            MaterialPageRoute(builder: (context) => Links()),
           );
         },
         ),

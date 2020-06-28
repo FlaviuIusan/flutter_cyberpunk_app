@@ -72,8 +72,7 @@ class _InfoWidgetState extends State<InfoWidget> {
           return _buildText(texts[i]);
         },
 
-      )
-      ;
+      );
   }
 }
 
