@@ -21,6 +21,8 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  google_fonts: ^1.1.0
+  auto_size_text: ^2.1.0
   flutter:
     sdk: flutter
 
@@ -59,6 +61,10 @@ flutter:
    - wallpapersbutton.gif
    - animatedbackground.gif
    - titleanimation.gif
+   - cyberpunk.ttf
+   - textbackground.jpg
+
+
 
   # To add assets to your application, add an assets section, like this:
   # assets:
@@ -70,7 +76,11 @@ flutter:
 
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/assets-and-images/#from-packages
-
+  fonts:
+    - family: Cyberpunk
+      fonts:
+        - asset: assets/fonts/cyberpunk.ttf
+          weight: 700
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
   # "family" key with the font family name, and a "fonts" key with a
