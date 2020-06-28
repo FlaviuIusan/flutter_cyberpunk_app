@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:projectx/wallpapers.dart';
+
+import 'info.dart';
 
 class MainMenu extends StatelessWidget {
   @override
@@ -50,7 +53,7 @@ class _MainMenuWidgetState extends State<MainMenuWidget> {
           ),onTap:(){
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => MainMenu()),
+            MaterialPageRoute(builder: (context) => Info()),
           );
         },
         ),
@@ -62,13 +65,13 @@ class _MainMenuWidgetState extends State<MainMenuWidget> {
                 color: Colors.black,
                 image: DecorationImage(
                     image:AssetImage("wallpapersbutton.gif"),
-                    fit:BoxFit.cover
+                    fit:BoxFit.cover,
                 ),
               )
           ),onTap:(){
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => MainMenu()),
+            MaterialPageRoute(builder: (context) => Wallpapers()),
           );
         },
         ),
