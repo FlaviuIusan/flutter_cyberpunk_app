@@ -3,8 +3,7 @@
 
 
 
-A cyberpunk application developed at Flutter Hackathon.
-
+A cyberpunk application developed at [Flutter Hackathon](https://youtu.be/mL_6PRfMW8Y?t=381).
 
 
 ![alt text](https://github.com/Flavius890/projectx/blob/master/assets/video/infobutton.gif)
