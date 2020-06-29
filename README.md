@@ -1,4 +1,5 @@
-# Projectx ![alt text](https://github.com/Flavius890/projectx/blob/master/assets/video/titleanimation.gif)
+# Projectx
+![alt text](https://github.com/Flavius890/projectx/blob/master/assets/video/titleanimation.gif)
 
 
 
