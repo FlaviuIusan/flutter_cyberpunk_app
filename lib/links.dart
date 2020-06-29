@@ -25,44 +25,56 @@ class _LinksWidgetState extends State<LinksWidget> {
           GestureDetector(
             child: Container(
                 height: MediaQuery.of(context).size.height / 4,
+                width: MediaQuery.of(context).size.width,
+
                 decoration: BoxDecoration(
+
                   color: Colors.black,
                   image: DecorationImage(
-                      image: AssetImage("infobutton.gif"), fit: BoxFit.cover),
+                      image: AssetImage("sitelinkbackground.gif"), fit: BoxFit.fill),
                 )),
             onTap: () {
-              _launchURL("http://flutter.dev");
+              _launchURL("https://www.cyberpunk.net/us/en/");
             },
           ),
           GestureDetector(
             child: Container(
                 height: MediaQuery.of(context).size.height / 4,
+                width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   color: Colors.black,
                   image: DecorationImage(
-                      image: AssetImage("infobutton.gif"), fit: BoxFit.cover),
+                      image: AssetImage("youtubelinkbackground.gif"), fit: BoxFit.fill),
                 )),
-            onTap: () {},
+            onTap: () {
+              _launchURL("https://www.youtube.com/c/CyberpunkGame/");
+            },
           ),
           GestureDetector(
             child: Container(
                 height: MediaQuery.of(context).size.height / 4,
+                width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   color: Colors.black,
                   image: DecorationImage(
-                      image: AssetImage("infobutton.gif"), fit: BoxFit.cover),
+                      image: AssetImage("redditlinkbackground.gif"), fit: BoxFit.fill),
                 )),
-            onTap: () {},
+            onTap: () {
+              _launchURL("https://www.reddit.com/r/cyberpunkgame/");
+            },
           ),
           GestureDetector(
             child: Container(
                 height: MediaQuery.of(context).size.height / 4,
+                width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   color: Colors.black,
                   image: DecorationImage(
-                      image: AssetImage("infobutton.gif"), fit: BoxFit.cover),
+                      image: AssetImage("facebooklinkbackground.gif"), fit: BoxFit.fill),
                 )),
-            onTap: () {},
+            onTap: () {
+              _launchURL("https://www.facebook.com/CDPROJEKTRED/");
+            },
           ),
         ],
       ),

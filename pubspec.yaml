@@ -65,6 +65,10 @@ flutter:
    - titleanimation.gif
    - cyberpunk.ttf
    - textbackground.jpg
+   - sitelinkbackground.gif
+   - youtubelinkbackground.gif
+   - redditlinkbackground.gif
+   - facebooklinkbackground.gif
 
 
 

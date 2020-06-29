@@ -15,9 +15,11 @@ AudioPlayer audioPlayer;
 bool _buttonstate = true;
 
 class MainApp extends StatelessWidget {
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    cache.loop("audio/maintheme.mp3");
     return MaterialApp(
       title: 'projectx',
       home: MainScreen(),
@@ -26,6 +28,7 @@ class MainApp extends StatelessWidget {
 }
 
 class MainScreen extends StatefulWidget {
+
   @override
   _MainScreenState createState() => _MainScreenState();
 }
@@ -36,22 +39,18 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom]);
     cache.play("audio/logosound.mp3");
-    setAudio();
+
     /*size 150
     backgroundColor: Colors.transparent,
     flexibleSpace: Image(
     image: AssetImage("titleanimation.gif"),
     fit: BoxFit.cover,
-
      */
     return Scaffold(
       body: _mainBody(),
     );
   }
 
-  static Future<void> setAudio() async {
-    audioPlayer = await cache.loop("audio/maintheme.mp3");
-  }
 
   Widget _mainBody() {
     return Container(
