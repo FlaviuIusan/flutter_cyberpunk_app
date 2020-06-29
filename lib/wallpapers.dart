@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 
 class WallpapersWidget extends StatefulWidget {
@@ -32,7 +33,7 @@ class _WallpapersWidgetState extends State<WallpapersWidget> {
             errorWidget: (context, url, error) => Icon(Icons.error),
           ),
         onTap: () {
-
+          _launchURL(imageUrl);
         },
       ),
     );
@@ -56,6 +57,15 @@ class _WallpapersWidgetState extends State<WallpapersWidget> {
             images.add("https://www.xboxwallpapers.net/1920x1080/cyberpunk-2077-concept-art-shootout.jpg");
           return _buildImage(images[i]);
         });
+  }
+
+  _launchURL(String site) async {
+    String url = site;
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 
 
