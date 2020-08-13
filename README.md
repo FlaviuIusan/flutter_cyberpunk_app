@@ -12,6 +12,6 @@ This application is about Cyberpunk 2077, an upcoming role-playing video game de
 
 Check out the video to discover our app:
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/JsNpQdnRtdk/0.jpg)](https://github.com/Flavius890/projectx/blob/master/Cyberpunk_Info_App.mp4)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/1367JwJ_tIw/0.jpg)](https://youtu.be/1367JwJ_tIw)
 
 Certificate of participation: [Hack20-certificate](https://github.com/Flavius890/projectx/blob/master/hack20-certificate.pdf) 
